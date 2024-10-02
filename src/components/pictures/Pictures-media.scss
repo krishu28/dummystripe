@@ -1,0 +1,41 @@
+@use '../../styles/vars' as v;
+
+@media only screen and (min-width: 1000px) {
+    .pictures {
+        &-wrapper {
+            padding-inline: 2rem;
+            top: -19rem;
+            left: -15rem;
+            gap: 3rem;
+            margin-inline: v.$wrapper-center;
+            padding-top: 5rem;
+            transform: scale(0.7);
+        }
+
+        div {
+        }
+
+        .visa {
+        }
+
+        .invoice {
+        }
+
+        .payment {
+            position: relative;
+            top: -10rem;
+        }
+
+        .phone {
+            justify-self: flex-end;
+            position: relative;
+            top: -32rem;
+        }
+
+        .fraud {
+            position: relative;
+            top: -10rem;
+            grid-column: span 2;
+        }
+    }
+}

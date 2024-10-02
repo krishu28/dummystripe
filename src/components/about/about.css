@@ -1,0 +1,42 @@
+.img-fluids {
+    text-align: center;
+   
+    border-radius:80px;
+    
+    
+    font-size: 15px;
+    -webkit-box-shadow: -15px -4px 118px -47px rgba(0,0,0,0.71);
+-moz-box-shadow: -15px -4px 118px -47px rgba(0,0,0,0.71);
+box-shadow: -15px -4px 118px -47px rgba(0,0,0,0.71);
+}
+
+.img-fluids:hover {
+
+    
+    animation: shaking 1s linear 2;
+}
+@keyframes shaking {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-2deg);
+    }
+    70% {
+        transform: rotate(2deg);
+    }
+}
+.fonts{
+    font-family: "Lato", sans-serif;
+    font-weight:bolder;
+    color:white;
+    font-size: x-large;
+    -webkit-box-shadow: inset 66px -54px 159px 66px rgba(184,94,184,0.65);
+    -moz-box-shadow: inset 66px -54px 159px 66px rgba(184,94,184,0.65);
+    box-shadow: inset 66px -54px 159px 66px rgba(184,94,184,0.65);
+}
+.img-hover:hover{
+    box-shadow: -8px -1px 21px 3px rgba(165, 113, 207, 0.48);
+    cursor: pointer;
+    transition: 1s;
+}

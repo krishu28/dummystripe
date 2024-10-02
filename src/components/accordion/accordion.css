@@ -1,0 +1,8 @@
+.accordion-header {
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: rgb(72, 65, 165); /* Change color as needed */
+  }
+  li{
+    font-family: "Roboto", sans-serif;
+  }

@@ -1,0 +1,63 @@
+// atomic classes here
+.container {
+    max-width: 1240px;
+    margin: auto;
+}
+
+// .btn {
+//     color: #fff;
+//     padding: 12px 24px;
+//     background-image: linear-gradient(45deg, #5651e5 0%, #709dff 100%);
+//     border: none;
+//     border-radius: 8px;
+//     font-size: 1.5rem;
+//     transition: 0.4s;
+//     cursor: pointer;
+
+//     &:active {
+//         transform: translate(4px);
+//         box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+//         border-bottom: none;
+//     }
+
+//     &:hover {
+//         transform: scale(1.1);
+//     }
+// }
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.inline-link {
+    color: #5f5bfe;
+    transition: 300ms;
+    &:hover {
+        color: #002640;
+    }
+}
+
+.gradient-wrapper {
+    position: absolute;
+    left: 0;
+    top: -80rem;
+    width: 100%;
+    height: 120rem;
+    transform: skewY(-12deg);
+    z-index: -3;
+    display: grid;
+    place-items: stretch;
+}
+
+#gradient-canvas {
+    width: 100%;
+    height: 100%;
+    --gradient-color-1: #ef008f;
+    --gradient-color-2: #6ec3f4;
+    --gradient-color-3: #7038ff;
+    --gradient-color-4: #ffba27;
+}

@@ -1,0 +1,269 @@
+@use '../../styles/vars' as v;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+// .nav-list-media {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     display: flex;
+
+//     li {
+//         position: relative;
+//         margin: 0 15px;
+
+//         a {
+//             text-decoration: none;
+//             color: #333;
+//             padding: 1px;
+//             display: block;
+//         }
+
+//         // Dropdown styles
+//         .prod{
+//             color:white;
+//             font-size:large;
+//         }
+//         .dropdown-menu {
+//             opacity: 0;
+//             visibility: hidden; // Use visibility for accessibility
+//             position: absolute;
+//             top: 100%;
+//             left: 0;
+//             border-radius: 10px;
+//             background-color: #fff;
+//             border: 1px solid #ddd;
+//             list-style: none;
+//             padding: 0;
+//             margin: 0;
+//             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//             z-index: 1000;
+//             width: 200px;
+//             font-family: "Inter", sans-serif;  
+//             font-weight: 600;
+//             transition: opacity 0.3s ease, visibility 0.3s ease; // Add transition
+            
+//             li {
+//                 margin: 0;
+        
+//                 a {
+//                     padding: 10px;
+//                     color: #333;
+//                     display: block;
+//                     text-decoration: none;
+        
+//                     &:hover {
+//                         background-color: #f5f5f5;
+//                         border-radius: 10px;
+//                     }
+//                 }
+//             }
+//         }
+        
+//         &:hover .dropdown-menu {
+//             opacity: 1;
+//             visibility: visible; // Change visibility on hover
+//         }
+//     }
+// }
+.nav-list-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .dropdown {
+        position: relative; // Needed for absolute positioning of dropdown menu
+        display: inline-block; // Allows for horizontal layout
+
+        &:hover .dropdown-menu {
+            display: block; // Show dropdown on hover
+        }
+      .prod{
+        font-weight: 800;
+        font-size: large;
+        padding: 18px;
+      }
+        .dropdown-menu {
+            font-size: 15px;
+            font-weight: 600;
+            display: none; // Hide by default
+            position: absolute; // Position relative to parent
+            background-color: white; // Background color for dropdown
+            // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Optional shadow
+            z-index: 3; // Ensure dropdown is above other elements
+            padding: 0;
+            border-radius: 10px 10px 10px 10px;
+
+            li {
+                padding: 10px;
+                white-space: nowrap; // Prevent text wrapping
+
+                Link {
+                    text-decoration: none;
+                    color: black; // Adjust color as needed
+                    display: block; // Make entire area clickable
+
+                    &:hover {
+                        background-color: white; // Highlight on hover
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbars {
+    margin: 0 auto;
+    // padding: 2rem;
+    max-width: v.$wrapper-max-width;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    .logo {
+        width: 25rem;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        .icon {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+
+    .hamburger-icon {
+        .icon {
+            width: 5rem;
+            height: 3rem;
+            padding: 5px;
+            background-color: rgb(240, 240, 245);
+            border-radius: 2rem;
+        }
+    }
+
+    .links {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        left: 2rem;
+        // width: 95vw;
+        height: 600px;
+        display: block;
+        color: #333;
+        border-radius: 1rem;
+        background-color: #fff;
+        box-shadow: 0 0 200px -10px grey;
+        z-index: 1;
+    }
+
+    .links-media {
+        display: none;
+    }
+
+    .active {
+        right: 0;
+    }
+
+    .nav-list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .list-head {
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                color: v.$light-purple;
+                width: 6rem;
+                height: 3rem;
+                .icon {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+
+            .icon {
+                font-size: 2rem;
+            }
+        }
+
+        & > li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6rem;
+            border-bottom: 1px dashed rgba(209, 209, 224, 0.5);
+            padding: 1rem;
+            & > a {
+                width: 100%;
+                color: v.$light-grey;
+                font-size: v.$head-fs;
+                font-weight: v.$head-fw;
+                letter-spacing: v.$head-ls;
+                line-height: v.$head-lh;
+            }
+        }
+
+        .list-btn {
+            margin-top: auto;
+            border: none;
+
+            button {
+                padding: v.$btn-p;
+                font-size: v.$btn-fs;
+                letter-spacing: v.$btn-ls;
+                line-height: v.$btn-lh;
+                border-radius: v.$btn-br;
+                background-color: v.$light-purple;
+                color: #fff;
+            }
+        }
+    }
+
+    .sign-in {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .navbars {
+        .hamburger-icon {
+            display: none;
+        }
+
+        .links {
+            display: none;
+        }
+
+        .links-media {
+            display: block;
+        }
+
+        .nav-list-media {
+            display: flex;
+            gap: 1rem;
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.2px;
+            line-height: 24px;
+        }
+
+        .list-btn {
+            display: none;
+        }
+
+        .sign-in {
+            display: block;
+            button {
+                font-size: v.$btn-fs;
+                font-weight: v.$btn-fw;
+                letter-spacing: v.$btn-ls;
+                line-height: v.$btn-lh;
+                padding: v.$btn-p;
+                background-color: rgba(240, 240, 245, 0.2);
+                border-radius: v.$btn-br;
+            }
+        }
+    }
+}
