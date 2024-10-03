@@ -55,7 +55,7 @@ const merchantData = [
 
 function Merchant() {
     return (
-        <MDBContainer style={{ marginTop: "5%", backgroundColor: "white", borderRadius: "10px", marginBottom: "5%" }}>
+        <div style={{ marginTop: "5%", backgroundColor: "white", borderRadius: "10px", marginBottom: "5%" }}>
             {merchantData.map((item, index) => (
                 <MDBRow key={index} className="gy-3">
                     {index % 2 === 0 ? (
@@ -155,7 +155,7 @@ function Merchant() {
                     )}
                 </MDBRow>
             ))}
-        </MDBContainer>
+        </div>
     );
 }
 

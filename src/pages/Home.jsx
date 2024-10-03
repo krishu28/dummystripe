@@ -28,7 +28,7 @@ function Home() {
             <div data-aos="fade-left">
                 <Approach />
             </div> 
-            <Anothercard />
+            {/* <Anothercard /> */}
             <Scale />
             <More />
         </main>
